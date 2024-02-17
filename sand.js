@@ -1,7 +1,16 @@
-// https://github.com/tapriandi/Dibimbing-batch-17.git
+// let number = "lili";
+// let number2 = "lili";
 
-// - git clone
-// - git add .
-// - git commit -m "message"
-// - git push
-// - git pull
+// let compare = number === number2;
+
+// let array = [1, 2, 3, 4, 5, 6];
+// let array1 = [1, 2, 3, 4, 5, 6];
+
+// let compare = array[0] === array1[0];
+
+// let obj = { name: "lili" };
+// let obj2 = { name: "lili" };
+
+// let compare = obj.name === obj2.name;
+
+// console.log(compare);
