@@ -80,31 +80,31 @@
 // console.log(s1.showSiswa());
 
 // dispatch
-// 
+//
 
 // ==================================
-let siswa = {
-  alksdjfalkjhsdfb: "",
-  lijasdkjfbasdhf: "",
+// let siswa = {
+//   alksdjfalkjhsdfb: "",
+//   lijasdkjfbasdhf: "",
 
-  get nama() {
-    return this.alksdjfalkjhsdfb;
-  },
-  get kelas() {
-    return this.lijasdkjfbasdhf;
-  },
+//   get nama() { // selector
+//     return this.alksdjfalkjhsdfb;
+//   },
+//   get kelas() {
+//     return this.lijasdkjfbasdhf;
+//   },
 
-  set nama(val) {
-    this._nama = val;
-  },
-  set kelas(val) {
-    this._kelas = val;
-  },
+//   set nama(val) { // dispatch
+//     this._nama = val;
+//   },
+//   set kelas(val) {
+//     this._kelas = val;
+//   },
 
-  updateNama: function (newname) {
-    this.alksdjfalkjhsdfb = newname;
-  },
-};
+//   updateNama: function (newname) {
+//     this.alksdjfalkjhsdfb = newname;
+//   },
+// };
 
 /*
 let siswa1 = {
@@ -117,7 +117,21 @@ siswa1.nama = 'budi'
 
 // siswa.nama = "lili";
 
-siswa.kelas = "C";
-siswa.updateNama('tono');
+// siswa.kelas = "C";
+// siswa.updateNama('tono');
 
-console.log(siswa.nama);
+// console.log(siswa.nama);
+
+// ==================================
+let login = {
+  __username: "",
+  __password: "",
+
+  set username(val) {
+    //
+    this.__username = val;
+  },
+};
+
+login.username = 'lala'
+// login.password = '12345'
