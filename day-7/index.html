@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dibimbing batch 17</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css">
+    
+  </head>
+  <body>
+
+    <h1>Produk Terlaris</h1>
+    <div id="app" class="container">
+      
+    </div>
+
+    <script>
+    async function getData() {
+        const app = document.getElementById('app')
+      try {
+        let res = await fetch("https://dummyjson.com/products");
+        let data = await res.json();
+
+        console.log(data)
+
+        data.products.map((item, index) => {
+            const card = document.createElement("div");
+            card.className = 'card'
+            
+            // image
+            const img = document.createElement("img");
+            img.src = 'https://pngimg.com/uploads/pokemon/pokemon_PNG111.png';
+            img.style.width = "200px";
+            card.append(img);
+
+            // title
+            const p = document.createElement("p");
+            p.innerHTML = item.title;
+            p.style.fontSize = "18px";
+            card.append(p);
+
+            // title
+            const p1 = document.createElement("p");
+            p1.innerHTML = '$'+item.price;
+            p1.style.fontSize = "18px";
+            card.append(p1);
+
+            app.append(card);
+        })
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    getData();
+  </script>
+</html>
